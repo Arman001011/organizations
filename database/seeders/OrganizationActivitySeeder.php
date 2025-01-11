@@ -32,9 +32,7 @@ class OrganizationActivitySeeder extends Seeder
                 if ($activity->parent && $activity->parent->parent_id && !in_array($activity->parent->parent_id, $fullActivities)) {
                     $fullActivities[] = $activity->parent->parent_id;
                 }
-//                echo '<pre>'; var_dump($fullActivities); //die;
                 sort($fullActivities);
-//                echo '<pre>'; var_dump($fullActivities); //die;
             }
 
             foreach ($fullActivities as $activityId) {
@@ -47,7 +45,6 @@ class OrganizationActivitySeeder extends Seeder
                 $organizationActivities[] = $data;
             }
         }
-//        echo '<pre>'; var_dump($organizationActivities); die;
         DB::table('organization_activity')->insert($organizationActivities);
     }
 }

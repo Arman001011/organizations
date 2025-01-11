@@ -13,13 +13,6 @@ class Organization extends Model
     const STATUS_ACTIVE = 1;
     const STATUS_INACTIVE = 2;
 
-    public static function getAvailableStatuses()
-    {
-        return [
-            self::STATUS_ACTIVE => __('Active'),
-            self::STATUS_INACTIVE => __('Inactive'),
-        ];
-    }
 
     protected $fillable = [
         'name',
@@ -31,5 +24,13 @@ class Organization extends Model
     public function activities(): BelongsToMany
     {
         return $this->belongsToMany(Activity::class)->withTimestamps();
+    }
+
+    public static function getAvailableStatuses()
+    {
+        return [
+            self::STATUS_ACTIVE => __('Active'),
+            self::STATUS_INACTIVE => __('Inactive'),
+        ];
     }
 }
