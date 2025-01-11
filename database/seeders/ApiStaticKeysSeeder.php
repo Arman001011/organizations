@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ApiStaticKey;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,9 +13,15 @@ class ApiStaticKeysSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('api_static_keys')->insert([
+        $data = [
             ['key' => 'static-key-1'],
             ['key' => 'static-key-2'],
-        ]);
+        ];
+        foreach ($data as $item) {
+            $exists = ApiStaticKey::where('key', $item['key'])->exists();
+            if (!$exists) {
+                ApiStaticKey::create($item);
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\ApiStaticKey;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,8 +18,7 @@ class ApiStaticKeyMiddleware
     {
         $apiKey = $request->header('X-STATIC-KEY');
 
-// @todo change to model
-        if (!$apiKey || !\DB::table('api_static_keys')->where('key', $apiKey)->exists()) {
+        if (!$apiKey || !ApiStaticKey::where('key', $apiKey)->exists()) {
             return response()->json(['message' => 'Unauthorized.'], 401);
         }
 
