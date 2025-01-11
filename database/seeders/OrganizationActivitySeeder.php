@@ -45,6 +45,7 @@ class OrganizationActivitySeeder extends Seeder
                 $organizationActivities[] = $data;
             }
         }
+
         DB::table('organization_activity')->insert($organizationActivities);
     }
 }

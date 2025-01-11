@@ -14,6 +14,9 @@ class DatabaseSeeder extends Seeder
     {
         {
             $this->run(ActivitySeeder::class);
+            $this->run(BuildingSeeder::class);
+            $this->run(OrganizationSeeder::class);
+            $this->run(OrganizationActivitySeeder::class);
         }
     }
 }
