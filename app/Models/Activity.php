@@ -33,7 +33,7 @@ class Activity extends Model
 
     public function organizations(): BelongsToMany
     {
-        return $this->belongsToMany(Organization::class)->withTimestamps();
+        return $this->belongsToMany(Organization::class, 'organization_activity')->withTimestamps();
     }
 
     public static function getAvailableStatuses()

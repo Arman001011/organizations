@@ -6,7 +6,7 @@ use App\Models\ApiStaticKey;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ApiStaticKeysSeeder extends Seeder
+class ApiStaticKeySeeder extends Seeder
 {
     /**
      * Run the database seeds.
