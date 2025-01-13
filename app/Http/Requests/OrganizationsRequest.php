@@ -28,8 +28,6 @@ class OrganizationsRequest extends FormRequest
 
     public function messages()
     {
-        return [
-
-        ];
+        return [];
     }
 }

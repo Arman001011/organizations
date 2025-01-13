@@ -59,6 +59,7 @@ class Organization extends Model
                 ->select('id')
                 ->get()
                 ->toArray();
+
             $activityIds = [];
             foreach ($activities as $activity) {
                 if (!in_array($activity['id'], $activityIds)) {
