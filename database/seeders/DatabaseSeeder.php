@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             $this->run(BuildingSeeder::class);
             $this->run(OrganizationSeeder::class);
             $this->run(OrganizationActivitySeeder::class);
-            $this->run(ApiStaticKeysSeeder::class);
+            $this->run(ApiStaticKeySeeder::class);
         }
     }
 }

@@ -7,10 +7,10 @@
 	},
 	"item": [
 		{
-			"name": "Test",
+			"name": "Organizations",
 			"item": [
 				{
-					"name": "test",
+					"name": "organizations",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -21,13 +21,240 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/api/test",
+							"raw": "{{host}}/api/organizations",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"api",
-								"test"
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations filtered by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations?filter[name]=cremin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "filter[name]",
+									"value": "cremin"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations filtered by building",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations?filter[building_id]=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "filter[building_id]",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations filtered by activity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations?filter[activity_id]=12650",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "filter[activity_id]",
+									"value": "12650"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations filtered by activity name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations?filter[activity_name]=uti",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "filter[activity_name]",
+									"value": "uti"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations filtered by circle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations/?filter[circle][latitude]=78.824490&filter[circle][longitude]=153.80925&filter[circle][radius]=15",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								""
+							],
+							"query": [
+								{
+									"key": "filter[circle][latitude]",
+									"value": "78.824490"
+								},
+								{
+									"key": "filter[circle][longitude]",
+									"value": "153.80925"
+								},
+								{
+									"key": "filter[circle][radius]",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations filtered by square",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations/?filter[square][latitude]=78.824490&filter[square][longitude]=153.80925&filter[square][width]=15&filter[square][height]=15",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								""
+							],
+							"query": [
+								{
+									"key": "filter[square][latitude]",
+									"value": "78.824490"
+								},
+								{
+									"key": "filter[square][longitude]",
+									"value": "153.80925"
+								},
+								{
+									"key": "filter[square][width]",
+									"value": "15"
+								},
+								{
+									"key": "filter[square][height]",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organizations/$id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/organizations/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"7"
 							]
 						}
 					},

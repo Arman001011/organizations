@@ -17,8 +17,9 @@ return new class extends Migration
                 $table->string('city')->index();
                 $table->string('address_1');
                 $table->string('address_2')->nullable();
-                $table->string('latitude')->index();
-                $table->string('longitude')->index();
+                $table->decimal('latitude', 10, 8);
+                $table->decimal('longitude', 11, 8);
+                $table->index(['latitude', 'longitude']);
                 $table->timestamps();
             });
         }
