@@ -301,12 +301,7 @@
 	"variable": [
 		{
 			"key": "host",
-			"value": "http://organizations.loc"
-		},
-		{
-			"key": "host_local",
-			"value": "http://organizations.loc",
-			"type": "string"
+			"value": "http://localhost:8080"
 		}
 	]
 }
