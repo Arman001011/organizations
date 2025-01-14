@@ -12,12 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        {
-            $this->run(ActivitySeeder::class);
-            $this->run(BuildingSeeder::class);
-            $this->run(OrganizationSeeder::class);
-            $this->run(OrganizationActivitySeeder::class);
-            $this->run(ApiStaticKeySeeder::class);
-        }
+        $this->call([
+            ActivitySeeder::class,
+            BuildingSeeder::class,
+            OrganizationSeeder::class,
+            OrganizationActivitySeeder::class,
+            ApiStaticKeySeeder::class,
+        ]);
     }
 }
