@@ -302,11 +302,6 @@
 		{
 			"key": "host",
 			"value": "http://localhost:8080"
-		},
-		{
-			"key": "host_local",
-			"value": "http://organizations.loc",
-			"type": "string"
 		}
 	]
 }
