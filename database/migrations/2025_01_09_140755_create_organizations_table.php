@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Organization;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,7 +18,7 @@ return new class extends Migration
                 $table->string('name')->index();
                 $table->text('phone_numbers');
                 $table->unsignedBigInteger('building_id')->nullable();
-                $table->tinyInteger('status')->index();
+                $table->tinyInteger('status')->default(Organization::STATUS_ACTIVE)->index();
                 $table->timestamps();
 
                 $table->foreign('building_id')

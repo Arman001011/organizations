@@ -36,6 +36,10 @@ To install the project with Docker please make sure you have installed it on you
 
 `php artisan db:seed`
 
-# Now the app will be available at http://localhost:8080.
+## Make storage accessible
+
+`php artisan storage:link`
+
+# Now the app will be available at http://localhost:8080. And API documentation will be visible at http://localhost:8080/api/documentation. 
 
 ### If you need to stop the containers, you can run `docker-compose down` and run `docker-compose up -d` to restart them. Artisan commands can be run from outside of containers like `docker exec -it laravel_app php artisan migrate`.

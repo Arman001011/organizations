@@ -165,7 +165,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/api/organizations/?filter[circle][latitude]=78.824490&filter[circle][longitude]=153.80925&filter[circle][radius]=15",
+							"raw": "{{host}}/api/organizations?filter[circle][latitude]=78.824490&filter[circle][longitude]=153.80925&filter[circle][radius]=15",
 							"host": [
 								"{{host}}"
 							],
@@ -204,7 +204,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/api/organizations/?filter[square][latitude]=78.824490&filter[square][longitude]=153.80925&filter[square][width]=15&filter[square][height]=15",
+							"raw": "{{host}}/api/organizations?filter[square][latitude]=78.824490&filter[square][longitude]=153.80925&filter[square][width]=15&filter[square][height]=15",
 							"host": [
 								"{{host}}"
 							],

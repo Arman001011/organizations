@@ -17,7 +17,7 @@ return new class extends Migration
                 $table->id();
                 $table->string('name')->index();
                 $table->unsignedBigInteger('parent_id')->nullable();
-                $table->tinyInteger('status')->index()->default(Activity::STATUS_ACTIVE);
+                $table->tinyInteger('status')->default(Activity::STATUS_ACTIVE)->index();
                 $table->timestamps();
 
                 $table->foreign('parent_id')
